@@ -3,13 +3,20 @@
     v: "weekly",
 });
 
-let map;
+
 
 async function initMap() {
-    const { Map } = await google.maps.importLibrary("maps");
+    let map;
+    let mapOptions = {
+        center:new google.maps.LatLng(52.482914, -1.744123),
+        zoom: 14,
+        mapTypeID: google.maps.MapTypeId.SATELLITE,
+        streetViewControl: true,
+        overviewMapControl: false,
+        rotateControl: false,
+        scaleControl: false,
+        panControl: false,
+    };
 
-    map = new Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-    });
+    map = new google.maps.Map(document.getElementById("map"), mapOptions) ;
 }

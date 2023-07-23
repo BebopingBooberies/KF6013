@@ -14,7 +14,7 @@ function getWeatherData () {
 
 function showWeatherData (data) {
     getTemp.window.onload =
-        '<img src="http://openweatherapp.org/img/wn.${day.weather[0].icon}@4x.png" alt="weather icon" className="w-icon">\n' +
+        '<img src="http://openweatherapp.org/img/wn.${day.weather[1].icon}@4x.png" alt="weather icon" className="w-icon">\n' +
         ' <div className="temp">Current - ${day.main.temp}; C</div>\n' +
         ' <div className="temp_max">High - ${day.main.temp_max}; C</div>\n' +
         ' <div className="temp_min">Low - ${day.main.temp_min}</div>\n';
