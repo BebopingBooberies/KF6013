@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <header>
+        <h1>Coast City Sports Centre</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Evaluation.html">Technical Architecture</a>
+        <a href="MembersPage.html">Members Page</a>
+    </nav>
+
+    <div class="weather-container">
+        <div class="today" id="today">
+            <img src="" alt="weather icon" class="w-icon">
+            <div class="temp">Current - &#176;C</div>
+            <div class="temp_max">High - &#176;C</div>
+            <div class="temp_min">Low - &#176;C</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="WeatherScript.js"></script>
+    <script type="text/javascript" src="https://api.openweathermap.org/data/2.5/weather?q=Fordbridge&units=metric&appid=5d3f345a0c084277fecfd6453ad0efce"></script>
+    <br>
+
+    <div id="map">
+    </div>
+    <script type="text/javascript0" src="GoogleMaps.js"></script>
+    <script type=text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvQDPn49jqBqxdUBYVQJINcb1MOn4ZwaU&callback=initMap" async defer>
+    </script>
+
+</body>
+</html>
