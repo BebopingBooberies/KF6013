@@ -1,5 +1,4 @@
-const getTemp = document.getElementById('weather')
-const setTemp = document.getElementById("today")
+const getTemp = document.getElementById('weather');
 
 
 getWeatherData()
