@@ -6,6 +6,7 @@ function initMap() {
         lng: -1.7514755725860596
     };
     const map = new google.maps.Map(document.getElementById("gmp-map"), {
+        key: AIzaSyDp_G9IHMvZPa34DVhY1kzvWOfojEMF4zo,
         zoom: 14,
         center: myLatLng,
         fullscreenControl: false,
