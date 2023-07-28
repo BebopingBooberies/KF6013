@@ -8,6 +8,7 @@
 async function initMap() {
     let map;
     let mapOptions = {
+        key: AIzaSyDp_G9IHMvZPa34DVhY1kzvWOfojEMF4zo,
         center:new google.maps.LatLng(52.482914, -1.744123),
         zoom: 14,
         mapTypeID: google.maps.MapTypeId.SATELLITE,
