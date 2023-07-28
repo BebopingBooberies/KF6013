@@ -6,8 +6,17 @@
 
 
 async function initMap() {
-    let map;
-    let mapOptions = {
+    let latlng = {lat: 52.482914, lng: -1.744123};
+    let map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 14,
+            center: latlng
+        }
+    );
+
+    let marker = new google.maps.Marker({position: latlng, map: map});
+
+    /*let mapOptions = {
         key: AIzaSyDp_G9IHMvZPa34DVhY1kzvWOfojEMF4zo,
         center:new google.maps.LatLng(52.482914, -1.744123),
         zoom: 14,
@@ -19,5 +28,5 @@ async function initMap() {
         panControl: false,
     };
 
-    map = new google.maps.Map(document.getElementById("map"), mapOptions) ;
+    map = new google.maps.Map(document.getElementById("map"), mapOptions) ;*/
 }
