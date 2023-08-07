@@ -8,8 +8,10 @@ function initMap() {
         }
     );
 
-    new google.maps.Marker({
-        position: latlng,
-        map
-    })
-};
+  //  new google.maps.Marker({
+ //       position: latlng,
+ //       map
+//    })
+}
+
+initMap();
