@@ -4,7 +4,6 @@
     outline-color: white;
     max-width: 50%;
 }
-
 #map-div{
     text-align: center;
     outline-color: white;
@@ -16,11 +15,9 @@
     min-width: 400px;
 
 }
-
 html,
 body {
     height: 100%;
     margin: 10px;
     padding: 10px;
 }
-
