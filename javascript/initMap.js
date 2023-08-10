@@ -6,7 +6,7 @@ async function initMap() {
    map = new Map(document.getElementById("map"), {
        center: latlng,
        zoom: 17,
-   });
+   })
 
    new google.maps.Marker({
        position: latlng,
