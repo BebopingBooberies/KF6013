@@ -2,7 +2,7 @@
 // author: Kelsey De Los Reyes Andrews
 //date: 16/03/2023
 //
-require_once__DIR__.'/KF6013/oauth-files/vendor/autoloader.php';
+require_once__DIR__.'/oauth-files/vendor/autoloader.php';
 
 session_start() ;
 //create a new instance of google client
