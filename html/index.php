@@ -49,6 +49,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     // credentials
     $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php';
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+    exit();
 }
 //checks to see if the sign out button has been pressed
 if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['sign-out'])) {
@@ -61,5 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['sign-out'])) {
     //redirect to a different page (the home page of the website)
     $redirect = 'http://' . $_SERVER['HTTP_HOST'] . '/index.html';
     header(' Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
+    exit();
 }
 ?>

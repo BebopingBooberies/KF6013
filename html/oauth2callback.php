@@ -12,7 +12,7 @@ $client->setAuthConfigFile('client-secret.json');
 // set the redirect url
 $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
 // add a scope for authorising the app with info on the google oauth
-$client->sddScope("https://www.googleapis.com/auth/userinfo.email");
+$client->addScope("https://www.googleapis.com/auth/userinfo.email");
 
 // if the user isn't authorised to use the app
 if (! isset($_GET['code'])) {
@@ -25,5 +25,6 @@ if (! isset($_GET['code'])) {
     $_SERVER['access_token'] = $client->getAccessToken();
     $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/index.php';
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+    exit();
 }
 ?>
