@@ -16,32 +16,35 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     //set the Google OAuth client access token
     $client->setAccessToken($_SESSION['access_token']);
     //create some html to notify the user that they have been successfully authenticated to use this page
-    $webpage = <<<HTML
-        <!DOCTYPE html>
-    <html lang="en">
+    $webpage = "    
+    <!DOCTYPE html>
+    <html lang=\"en\">
     <head>
-        <meta charset="UTF-8">
+        <meta charset=\"UTF-8\">
         <title>Members page</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\">
     </head>
-    <body>
+    <main>
         <header>
             <h1>Coast City Sports Centre</h1>
         </header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Evaluation.html">Technical Architecture</a>
-            <a href="index.php">Members Page</a>
+            <a href=\"index.html\">Home</a>
+            <a href=\"Evaluation.html\">Technical Architecture</a>
+            <a href=\"index.php\">Members Page</a>
         </nav>
     
-        <div id="test">
+        <div id=\"test\">
             <h2>Test Page</h2>
             <p>this is a test page. if this shows you have successfully sorted your php out. well done!</p>
         </div>
+        
+        <form action='index.php' method='post'>
+        <input id=\"log-out\" type=\"submit\" name=\"log-out\" value=\"Log out\" />
+    </form>
     
-    </body>
-    </html>
-    HTML;
+    </main>
+    </html>";
 
     echo $webpage;
 } else {
