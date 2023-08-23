@@ -8,7 +8,7 @@ session_start();
 //create a new google client instance
 $client = new Google\Client();
 // configure the client with the details provided in the Google OAuth client JSON file
-$client->setAuthConfigFile('client_secret.json');
+$client->setAuthConfigFile('client-secret.json');
 // set the redirect url
 $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
 // add a scope for authorising the app with info on the google oauth

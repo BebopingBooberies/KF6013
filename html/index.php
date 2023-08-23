@@ -8,7 +8,7 @@ session_start() ;
 //create a new instance of google client
 $client = new Google\Client();
 //configure the client with the details provided in the Google OAuth client JSON file
-$client->setAuthConfig('client_secret.json');
+$client->setAuthConfig('client-secret.json');
 $client->addScope("https://googleapis.com/auth/userinfo.email");
 
 //check to see if there is an access token
@@ -36,6 +36,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     
         <div id="test">
             <h2>Test Page</h2>
+            <p>this is a test page. if this shows you have successfully sorted your php out. well done!</p>
         </div>
     
     </body>
@@ -50,7 +51,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 //checks to see if the sign out button has been pressed
-if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['signout'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['sign-out'])) {
     //revoke the client token so the user can't use the app unless they sign in again
     $client->revokeToken($_SESSION['access_token']);
 
