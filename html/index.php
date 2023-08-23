@@ -8,7 +8,7 @@ session_start() ;
 //create a new instance of google client
 $client = new Google\Client();
 //configure the client with the details provided in the Google OAuth client JSON file
-$client->setAuthConfig('client-secret.json');
+$client->setAuthConfig('/oauth-files/client-secret.json');
 $client->addScope("https://googleapis.com/auth/userinfo.email");
 
 //check to see if there is an access token
