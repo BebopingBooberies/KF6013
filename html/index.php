@@ -31,7 +31,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         <nav>
             <a href="index.html">Home</a>
             <a href="Evaluation.html">Technical Architecture</a>
-            <a href="MembersPage.html">Members Page</a>
+            <a href="index.php">Members Page</a>
         </nav>
     
         <div id="test">
