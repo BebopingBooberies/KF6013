@@ -2,7 +2,7 @@
 // author: Kelsey De Los Reyes Andrews
 // date: 16/08/2023
 // run the autoload.php file that is in the vendor file and contains the google oauth dependancies
-require_once__DIR__.'/oauth-files/vendor/autoload.php';
+require_once __DIR__.'/oauth-files/vendor/autoload.php';
 
 session_start();
 //create a new google client instance
@@ -22,7 +22,7 @@ if (! isset($_GET['code'])) {
 } else {
     // otherwise get the user sign in information and redirect them to the index.php page
     $client->authenticate($_GET['code']);
-    $_SERVER['access_token'] = $client->getAccessToken();
+    $_SESSION['access_token'] = $client->getAccessToken();
     $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/index.php';
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
     exit();

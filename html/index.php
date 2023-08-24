@@ -8,11 +8,11 @@ session_start() ;
 //create a new instance of google client
 $client = new Google\Client();
 //configure the client with the details provided in the Google OAuth client JSON file
-$client->setAuthConfig('/oauth-files/client-secret.json');
-$client->addScope("https://googleapis.com/auth/userinfo.email");
+$client->setAuthConfigFile('/oauth-files/client-secret.json');
+$client->addScope("https://www.googleapis.com/auth/userinfo.email");
 
 //check to see if there is an access token
-if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+if (!empty($_SESSION['access_token'])) {
     //set the Google OAuth client access token
     $client->setAccessToken($_SESSION['access_token']);
     //create some html to notify the user that they have been successfully authenticated to use this page
