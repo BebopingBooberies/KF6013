@@ -15,7 +15,7 @@ $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/KF6013/oauth2callb
 $client->addScope("https://www.googleapis.com/auth/userinfo.email");
 
 // if the user isn't authorised to use the app
-if (! isset($_GET['code'])) {
+if (!isset($_GET['code'])) {
     //send the user to the google sign in page
     $auth_url = $client->createAuthUrl();
     header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
