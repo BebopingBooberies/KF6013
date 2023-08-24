@@ -2,7 +2,7 @@
 // author: Kelsey De Los Reyes Andrews
 // date: 16/08/2023
 // run the autoload.php file that is in the vendor file and contains the google oauth dependancies
-require_once __DIR__.'/oauth-files/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
 session_start();
 //create a new google client instance

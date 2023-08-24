@@ -55,7 +55,7 @@ if (!empty($_SESSION['access_token'])) {
     exit();
 }
 //checks to see if the sign out button has been pressed
-if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['sign-out'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['log-out'])) {
     //revoke the client token so the user can't use the app unless they sign in again
     $client->revokeToken($_SESSION['access_token']);
 
