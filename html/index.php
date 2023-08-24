@@ -50,7 +50,7 @@ if (!empty($_SESSION['access_token'])) {
 } else {
     //if no access token exists redirect to the oauth2callback page which asks the user to sign in with their google
     // credentials
-    $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php';
+    $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/KF6013/oauth2callback.php';
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
     exit();
 }
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['log-out'])) {
     session_destroy();
 
     //redirect to a different page (the home page of the website)
-    $redirect = 'http://' . $_SERVER['HTTP_HOST'] . '/index.html';
+    $redirect = 'http://' . $_SERVER['HTTP_HOST'] . '/KF6013/index.html';
     header(' Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
     exit();
 }

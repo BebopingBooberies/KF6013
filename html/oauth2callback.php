@@ -2,7 +2,7 @@
 // author: Kelsey De Los Reyes Andrews
 // date: 16/08/2023
 // run the autoload.php file that is in the vendor file and contains the google oauth dependancies
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/oauth-files/vendor/autoload.php';
 
 session_start();
 //create a new google client instance
@@ -10,7 +10,7 @@ $client = new Google\Client();
 // configure the client with the details provided in the Google OAuth client JSON file
 $client->setAuthConfigFile('/oauth-files/client-secret.json');
 // set the redirect url
-$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
+$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/KF6013/oauth2callback.php');
 // add a scope for authorising the app with info on the google oauth
 $client->addScope("https://www.googleapis.com/auth/userinfo.email");
 
@@ -23,7 +23,7 @@ if (! isset($_GET['code'])) {
     // otherwise get the user sign in information and redirect them to the index.php page
     $client->authenticate($_GET['code']);
     $_SESSION['access_token'] = $client->getAccessToken();
-    $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/index.php';
+    $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/KF6013/index.php';
     header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
     exit();
 }
